@@ -1,0 +1,34 @@
+Вынести структуры данных в отдельные пакеты: 
+
+// person/person.go
+package person
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+
+Переделать функции, которые обрабатывают структуры данных, в методы
+
+// person/person.go
+package person
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func (p Person) GetAge() int {
+    return p.Age
+}
+
+Сделать структуры данных на дженериках
+
+
+// box/box.go
+package box
+
+type Box[T any] struct {
+    Content T
+}
